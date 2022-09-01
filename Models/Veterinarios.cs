@@ -6,6 +6,7 @@ namespace DesafioAPIConsultasVeterinarias.Models
 {
     public class Veterinarios
     {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Nome do veterinário é obrigatório")]

@@ -18,14 +18,12 @@ namespace DesafioAPIConsultasVeterinarias.Models
         [Required(ErrorMessage = "Descrição da consulta é obrigatória")]
         public string Descricao { get; set; }
 
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         [Required(ErrorMessage = "Id do animal é obrigatório")]
         public int AnimalId { get; set; } // FK da tabela Consultas
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         public Animais Animal { get; set; }
 
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         [Required(ErrorMessage = "Id do veterinário é obrigatório")]
         public int VeterinarioId { get; set; } // FK da tabela Consultas
 

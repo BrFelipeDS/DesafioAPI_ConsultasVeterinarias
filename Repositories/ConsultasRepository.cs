@@ -90,18 +90,18 @@ namespace DesafioAPIConsultasVeterinarias.Repositories
                             {
                                 Id = (int)reader["Id_Consulta"],
                                 Descricao = (string)reader["Descricao_Consulta"],
+                                AnimalId = (int)reader["Id_Animal"],
                                 Animal = new Animais
                                 {
-                                    Id = (int)reader["Id_Animal"],
                                     Nome = (string)reader["Nome_Animal"],
                                     Raca = (string)reader["Raca_Animal"],
                                     NomeDono = (string)reader["Dono"],
                                     ContatoDono = (string)reader["Contato_Dono"],
                                     Imagem = null
                                 },
+                                VeterinarioId = (int)reader["Id_Veterinario"],
                                 Veterinario = new Veterinarios
                                 {
-                                    Id = (int)reader["Id_Veterinario"],
                                     Nome = (string)reader["Nome_Veterinario"],
                                     Email = (string)reader["Email_Veterinario"],
                                     Contato = (string)reader["Contato_Veterinario"],
