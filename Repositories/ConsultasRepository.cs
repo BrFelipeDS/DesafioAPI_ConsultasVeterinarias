@@ -56,6 +56,9 @@ namespace DesafioAPIConsultasVeterinarias.Repositories
             {
                 conexao.Open();
 
+                // Seleciona as colunas referente às informações da tabela Consultas e realiza
+                // um JOIN com as tabelas Animais e Veterinarios, para puxar as informações de cada uma
+                // em relação ao Id em comum das Foreign Keys de Consultas
                 string query = @"SELECT
                                         C.Id AS 'Id_Consulta',
                                         C.Descricao AS 'Descricao_Consulta',
@@ -81,6 +84,8 @@ namespace DesafioAPIConsultasVeterinarias.Repositories
                     {
                         while (reader.Read())
                         {
+                            // Exibe as informãções das tabelas das respectivas Foreign Keys associadas aos itens em
+                            // Animais e Veterinários
                             consultas.Add(new Consultas
                             {
                                 Id = (int)reader["Id_Consulta"],
