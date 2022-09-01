@@ -120,5 +120,45 @@
             <param name="id">Id do veterinário</param>
             <returns>Mensagem de exclusão</returns>
         </member>
+        <member name="T:DesafioAPIConsultasVeterinarias.Models.Consultas">
+            <summary>
+            Definição do Model Consultas
+            </summary>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Repositories.ConsultasRepository.Delete(System.Int32)">
+            <summary>
+            Método que possibilita a deleção de uma linha da respectiva tabela
+            </summary>
+            <param name="id">Id do item a ser deletado</param>
+            <returns>Retorna booleano indicando se houve a exclusão</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Repositories.ConsultasRepository.GetAll">
+            <summary>
+            Método responsável por gerar uma lista com todos os itens da respectiva tabela
+            </summary>
+            <returns>Lista de itens da tabela</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Repositories.ConsultasRepository.GetById(System.Int32)">
+            <summary>
+            Método resonsável por selecionar 1 item da respectiva tabela com base no seu Id
+            </summary>
+            <param name="id">Id do item a ser selecionado</param>
+            <returns>Retorna um objeto do tipo referente ao repository</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Repositories.ConsultasRepository.Insert(DesafioAPIConsultasVeterinarias.Models.Consultas)">
+            <summary>
+            Método responsável por inserir um novo item na respectiva tabela
+            </summary>
+            <param name="consulta">Objeto a ser inserido na tabela dentro do DB</param>
+            <returns>Retorna um objeto do tipo referente ao repository</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Repositories.ConsultasRepository.Update(System.Int32,DesafioAPIConsultasVeterinarias.Models.Consultas)">
+            <summary>
+            Método responsável por alterar os dados de algum item da respectiva tabela, através do Id
+            </summary>
+            <param name="id">Id do item a ser alterado</param>
+            <param name="consulta">Objeto que irá substituir os objeto presente no item a ser substituído</param>
+            <returns>Retorna um objeto do tipo referente ao repository</returns>
+        </member>
     </members>
 </doc>

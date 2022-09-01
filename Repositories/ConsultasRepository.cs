@@ -56,24 +56,23 @@ namespace DesafioAPIConsultasVeterinarias.Repositories
             {
                 conexao.Open();
 
-                //string query = @"SELECT
-                //                        C.Id AS 'Id_Consulta',
-                //                        C.Descricao AS 'Descricao_Consulta',
-                //                        C.AnimalId AS 'Id_Animal',
-                //                        Animais.Nome AS 'Nome_Animal',
-                //                        Animais.Raca AS 'Raca_Animal',
-                //                        Animais.NomeDono AS 'Dono',
-                //                        Animais.ContatoDono AS 'Contato_Dono',
-                //                        C.VeterinarioId AS 'Id_Veterinario',
-                //                        Veterinarios.Nome AS 'Nome_Veterinario',
-                //                        Veterinarios.Email AS 'Email_Veterinario',
-                //                        Veterinarios.Contato AS 'Contato_Veterinario'
-                //                    FROM Consultas AS C
-                //                    JOIN Animais ON C.AnimalId = Animais.Id
-                //                    JOIN Veterinarios ON C.VeterinarioId = Veterinarios.Id";
+                string query = @"SELECT
+                                        C.Id AS 'Id_Consulta',
+                                        C.Descricao AS 'Descricao_Consulta',
+                                        C.AnimalId AS 'Id_Animal',
+                                        Animais.Nome AS 'Nome_Animal',
+                                        Animais.Raca AS 'Raca_Animal',
+                                        Animais.NomeDono AS 'Dono',
+                                        Animais.ContatoDono AS 'Contato_Dono',
+                                        C.VeterinarioId AS 'Id_Veterinario',
+                                        Veterinarios.Nome AS 'Nome_Veterinario',
+                                        Veterinarios.Email AS 'Email_Veterinario',
+                                        Veterinarios.Contato AS 'Contato_Veterinario'
+                                    FROM Consultas AS C
+                                    JOIN Animais ON C.AnimalId = Animais.Id
+                                    JOIN Veterinarios ON C.VeterinarioId = Veterinarios.Id";
 
-                string query = "SELECT * FROM Consultas";
-                                        
+
 
                 using (SqlCommand cmd = new SqlCommand(query, conexao))
                 {
@@ -84,30 +83,25 @@ namespace DesafioAPIConsultasVeterinarias.Repositories
                         {
                             consultas.Add(new Consultas
                             {
-                                Id = (int)reader[0],
-                                Descricao = (string)reader[1],
-                                AnimalId = (int)reader[2],
-                                VeterinarioId = (int)reader[3]
-
-                                //Id = (int)reader["Id_Consulta"],
-                                //Descricao = (string)reader["Descricao_Consulta"],
-                                //Animal = new Animais
-                                //{
-                                //    Id = (int)reader["Id_Animal"],
-                                //    Nome = (string)reader["Nome_Animal"],
-                                //    Raca = (string)reader["Raca_Animal"],
-                                //    NomeDono = (string)reader["Dono"],
-                                //    ContatoDono = (string)reader["Contato_Dono"],
-                                //    Imagem = null
-                                //},
-                                //Veterinario = new Veterinarios
-                                //{
-                                //    Id = (int)reader["Id_Veterinario"],
-                                //    Nome = (string)reader["Nome_Veterinario"],
-                                //    Email = (string)reader["Email_Veterinario"],
-                                //    Contato = (string)reader["Contato_Veterinario"],
-                                //    Imagem = null
-                                //}
+                                Id = (int)reader["Id_Consulta"],
+                                Descricao = (string)reader["Descricao_Consulta"],
+                                Animal = new Animais
+                                {
+                                    Id = (int)reader["Id_Animal"],
+                                    Nome = (string)reader["Nome_Animal"],
+                                    Raca = (string)reader["Raca_Animal"],
+                                    NomeDono = (string)reader["Dono"],
+                                    ContatoDono = (string)reader["Contato_Dono"],
+                                    Imagem = null
+                                },
+                                Veterinario = new Veterinarios
+                                {
+                                    Id = (int)reader["Id_Veterinario"],
+                                    Nome = (string)reader["Nome_Veterinario"],
+                                    Email = (string)reader["Email_Veterinario"],
+                                    Contato = (string)reader["Contato_Veterinario"],
+                                    Imagem = null
+                                }
                             });
                         }
                     }

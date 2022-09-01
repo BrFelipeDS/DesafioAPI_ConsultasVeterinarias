@@ -18,7 +18,7 @@ namespace APIMaisEventos.Utils
                 var caminho = Path.Combine(Directory.GetCurrentDirectory(), pasta);
 
                 // Verificamos se existe um arquivo para ser salvo
-                if (arquivo.Length > 0)
+                if (arquivo is not null)
                 {
                     // Pegamos o nome do arquivo
                     string nomeArquivo = ContentDispositionHeaderValue.Parse(arquivo.ContentDisposition).FileName.Trim('"');
@@ -41,7 +41,7 @@ namespace APIMaisEventos.Utils
 
                 }
                 
-                return "";
+                return null;
             }
             catch (System.Exception e)
             {

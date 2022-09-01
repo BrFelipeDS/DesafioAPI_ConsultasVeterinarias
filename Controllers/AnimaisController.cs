@@ -34,8 +34,17 @@ namespace DesafioAPIConsultasVeterinarias.Controllers
                 {
                     return BadRequest("Arquivo não encontrado ou extensão não permitida");
                 }
-
-                animal.Imagem = uploadResultado;
+                else if(uploadResultado is null)
+                {
+                    return BadRequest(new
+                    {
+                        msg = "Foto do animal é obrigatória"
+                    }); 
+                }
+                else
+                {
+                    animal.Imagem = uploadResultado;
+                }                
                 #endregion
 
 
@@ -139,8 +148,17 @@ namespace DesafioAPIConsultasVeterinarias.Controllers
                 {
                     return BadRequest("Arquivo não encontrado ou extensão não permitida");
                 }
-
-                animal.Imagem = uploadResultado;
+                else if (uploadResultado is null)
+                {
+                    return BadRequest(new
+                    {
+                        msg = "Foto do animal é obrigatória"
+                    });
+                }
+                else
+                {
+                    animal.Imagem = uploadResultado;
+                }
                 #endregion
 
                 var animalAlterado = repositorio.Update(id, animal);
