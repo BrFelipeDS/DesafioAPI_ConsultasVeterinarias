@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DesafioAPIConsultasVeterinarias</name>
+    </assembly>
+    <members>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.AnimaisController.Cadastrar(DesafioAPIConsultasVeterinarias.Models.Animais,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Cadastra animais na aplicação
+            </summary>
+            <param name="animal">Dados do paciente animal</param>
+            <param name="arquivo">Arquivo a ser subido</param>
+            <returns>Dados do animal cadastrado</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.AnimaisController.Listar">
+            <summary>
+            Lista todos os animais da apliacação
+            </summary>
+            <returns>Lista de animais</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.AnimaisController.Alterar(System.Int32,DesafioAPIConsultasVeterinarias.Models.Animais,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Altera os dados de um animal
+            </summary>
+            <param name="id">Id do paciente animal</param>
+            <param name="animal">Todas as informações do paciente animal</param>
+            <param name="arquivo">Arquivo anexado</param>
+            <returns>Paciente animal alterado</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.AnimaisController.Deletar(System.Int32)">
+            <summary>
+            Exclui um animal da aplicação
+            </summary>
+            <param name="id">Id do paciente animal</param>
+            <returns>Mensagem de exclusão</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.ConsultasController.Cadastrar(DesafioAPIConsultasVeterinarias.Models.Consultas)">
+            <summary>
+            Cadastra consultas na aplicação
+            </summary>
+            <param name="consulta">Dados da consulta</param>
+            <returns>Dados da consulta cadastrada</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.ConsultasController.Listar">
+            <summary>
+            Lista todas as consultas da apliacação
+            </summary>
+            <returns>Lista de consultas</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.ConsultasController.Alterar(System.Int32,DesafioAPIConsultasVeterinarias.Models.Consultas)">
+            <summary>
+            Altera os dados de uma consulta
+            </summary>
+            <param name="id">Id da consulta</param>
+            <param name="consulta">Todas as informações do usuário</param>
+            <returns>Consulta alterada</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.ConsultasController.Deletar(System.Int32)">
+            <summary>
+            Exclui uma consulta da aplicação
+            </summary>
+            <param name="id">Id da consulta</param>
+            <returns>Mensagem de exclusão</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.DiagnosticosController.Cadastrar(DesafioAPIConsultasVeterinarias.Models.Diagnosticos)">
+            <summary>
+            Cadastra diagnóstico na aplicação
+            </summary>
+            <param name="diagnostico">Dados do diagnóstico</param>
+            <returns>Dados do diagnóstico cadastrado</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.DiagnosticosController.Listar">
+            <summary>
+            Lista todos os diagnósticos da apliacação
+            </summary>
+            <returns>Lista de diagnósticos</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.DiagnosticosController.Alterar(System.Int32,DesafioAPIConsultasVeterinarias.Models.Diagnosticos)">
+            <summary>
+            Altera os dados de um diagnóstico
+            </summary>
+            <param name="id">Id do diagnóstico</param>
+            <param name="diagnostico">Todas as informações do diagnóstico</param>
+            <returns>Diagnóstico alterado</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.DiagnosticosController.Deletar(System.Int32)">
+            <summary>
+            Exclui um diagnostico da aplicação
+            </summary>
+            <param name="id">Id do diagnostico</param>
+            <returns>Mensagem de exclusão</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.VeterinariosController.Cadastrar(DesafioAPIConsultasVeterinarias.Models.Veterinarios,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Cadastra veterinários na aplicação
+            </summary>
+            <param name="veterinario">Dados do veterinário</param>
+            <param name="arquivo">Arquivo a ser subido</param>
+            <returns>Dados do veterinário cadastrado</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.VeterinariosController.Listar">
+            <summary>
+            Lista todos os veterinários da apliacação
+            </summary>
+            <returns>Lista de veterinários</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.VeterinariosController.Alterar(System.Int32,DesafioAPIConsultasVeterinarias.Models.Veterinarios,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Altera os dados de um veterinário
+            </summary>
+            <param name="id">Id do veterinário</param>
+            <param name="veterinario">Todas as informações do veterinário</param>
+            <param name="arquivo">Arquivo anexado</param>
+            <returns>Veterinário alterado</returns>
+        </member>
+        <member name="M:DesafioAPIConsultasVeterinarias.Controllers.VeterinariosController.Deletar(System.Int32)">
+            <summary>
+            Exclui um veterinário da aplicação
+            </summary>
+            <param name="id">Id do veterinário</param>
+            <returns>Mensagem de exclusão</returns>
+        </member>
+    </members>
+</doc>
